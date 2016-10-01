@@ -1,7 +1,22 @@
 <html ng-app="apiApp">
-	<body>
-		
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<head>
+		<link rel="stylesheet" href="../app2-an_array/style.css"></link>
+	</head>
+	<body ng-controller="mainCtrl">
+
+		<div class="row">
+			<div class="personData" ng-repeat="vehicle in vehicles">
+				Vehicle: {{ vehicle.name }}
+				<br>
+				Model: {{ vehicle.model }}
+				<br>
+				Cost: {{ vehicle.cost_in_credits }}
+				<br>
+				# of crew: {{ vehicle.crew }}
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>

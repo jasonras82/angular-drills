@@ -1,6 +1,26 @@
-<html>
-	<body>
-		Something
+<html ng-app="angular-drills3">
+<head>
+	<link rel="stylesheet" href="../app2-an_array/style.css"></link>
+</head>
+	<body ng-controller="mainCtrl">
+
+		<div class="search">
+			<input type="text" placeholder="Filter" class="search-box" ng-model="searchEmployees">
+			<!-- <button type="button" name="button" class="search-button" ng-click="search()">Search</button> -->
+		</div>
+
+		<div class="row">
+			<div class="personData" ng-repeat="data in employmentData | filter: searchEmployees">
+				{{ data.name }}
+				<br>
+				{{ data.email }}
+				<br>
+				{{ data.dateEmployed }}
+				<br>
+				{{ data.phone }}
+			</div>
+		</div>
+
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
